@@ -1,11 +1,9 @@
 import React from 'react'
 
-const Todos = () => {
+export const Todos = () => {
   return (
     <div>
-      Todos Works!
+      Todos Works!!
     </div>
   )
 }
-
-export default Todos
