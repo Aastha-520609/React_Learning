@@ -3,9 +3,8 @@ import React from 'react'
 export const About = () => {
   return (
     <div>
-      This is an about component
-      <p>Lorem ipsum 
-      </p>
+      <h1>This is about component</h1>
+      <p>Lorem ipsum </p>
     </div>
   )
 }

@@ -5,12 +5,10 @@ import {Footer} from "./MyComponents/Footer";
 import {AddTodo} from "./MyComponents/AddTodo";
 import {About} from "./MyComponents/About";
 import React, { useState, useEffect } from 'react';
-import React from "react";
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  Routes,
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -63,19 +61,17 @@ function App() {
   <>
   <Router>
     <Header title = "My ToDos List"/>
-    <Switch>
-          <Route exact path="/" render={()=>{
-            return(
+     <Routes>
+          <Route exact path="/"  element ={ 
             <>
               <AddTodo addTodo={addTodo}/>
               <Todos todos={todos} onDelete={onDelete}/>
-            </>)
-          }}>
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-    </Switch>
+            </>
+          } />
+
+           <Route exact path="/about" element = { <About /> } />
+
+      </Routes>
     <Footer/>
   </Router>  
   </>
